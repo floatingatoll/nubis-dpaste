@@ -2,7 +2,7 @@
 
 NOTE: All examples run from the top level project directory.
 
-You need to create a parameters.json file. You can use parameters.json-dist as an template.
+You need to create a ```parameters.json``` file. You can use ```parameters.json-dist``` as an template.
 
 To create a new stack:
 ```bash
@@ -19,7 +19,7 @@ To delete the stack:
 aws cloudformation delete-stack --stack-name nubis-dpaste
 ```
 
-After creating or updating a stack you might need to update Consul. Run this command to take any (properly described) Cloudformation outputs and insert or update them in Consul:
+After creating or updating a stack you might need to update Consul. Run this command to take any (properly described) CloudFormation outputs and insert or update them in Consul:
 ```bash
 nubis-consul --stack-name nubis-dpaste --settings nubis/cloudformation/parameters.json get-and-update
 ```
@@ -31,4 +31,4 @@ nubis-consul --stack-name nubis-dpaste get-route53-nameservers
 
 #### Nested Stacks
 
-We are using nested stacks to deploy the necessayr resources. You can find the nested stack templates at [nubis-stacks](https://github.com/Nubisproject/nubis-stacks).
+We are using nested stacks to deploy the necessary resources. You can find the nested stack templates at [nubis-stacks](https://github.com/Nubisproject/nubis-stacks).
